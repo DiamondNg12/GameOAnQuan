@@ -29,9 +29,9 @@ public class GameMode extends JPanel{
 		this.main = main;
 		
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{106, 175, 12, 0, 138, 120, 0};
+		gridBagLayout.columnWidths = new int[]{106, 51, 164, 12, 0, 138, 120, 0};
 		gridBagLayout.rowHeights = new int[]{0, 78, 68, 36, 46, 0, 0};
-		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
@@ -53,7 +53,7 @@ public class GameMode extends JPanel{
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.gridwidth = 4;
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel.gridx = 1;
+		gbc_lblNewLabel.gridx = 2;
 		gbc_lblNewLabel.gridy = 2;
 		add(lblNewLabel, gbc_lblNewLabel);
 		
@@ -67,7 +67,7 @@ public class GameMode extends JPanel{
 		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
 		gbc_btnNewButton.insets = new Insets(0, 0, 5, 5);
-		gbc_btnNewButton.gridx = 1;
+		gbc_btnNewButton.gridx = 2;
 		gbc_btnNewButton.gridy = 4;
 		add(btnNewButton, gbc_btnNewButton);
 		
@@ -75,7 +75,7 @@ public class GameMode extends JPanel{
 		btnNewButton_1.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
 		gbc_btnNewButton_1.insets = new Insets(0, 0, 5, 5);
-		gbc_btnNewButton_1.gridx = 4;
+		gbc_btnNewButton_1.gridx = 5;
 		gbc_btnNewButton_1.gridy = 4;
 		add(btnNewButton_1, gbc_btnNewButton_1);
 		

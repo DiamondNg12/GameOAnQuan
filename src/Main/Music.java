@@ -70,7 +70,7 @@ public class Music extends JPanel{
 	protected void paintComponent(Graphics g) {
 		// TODO Auto-generated method stub
 		super.paintComponent(g);
-		g.drawImage(bg, 0, 0, 737, 640, null);
+		g.drawImage(bg, 0, 0, 640, 480, null);
 	}
 	
 	

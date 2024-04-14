@@ -18,6 +18,7 @@ public class Main{
 	Level level;
 	Rule rule;
 	Music music;
+	MainGame main_game;
 	
 	public Main() {
 		this.window = new JFrame("Ô ăn quan");
@@ -26,6 +27,7 @@ public class Main{
 		level = new Level(this);
 		rule = new Rule(this);
 		music = new Music(this);
+		main_game = new MainGame(this);
 		
 		window.setSize(640, 480);
 		window.setLocationRelativeTo(null);
@@ -38,6 +40,7 @@ public class Main{
 		main_panel.add(level, "level");
 		main_panel.add(rule, "rule");
 		main_panel.add(music, "music");
+		main_panel.add(main_game, "main_game");
 		window.setVisible(true);
 	}
 	

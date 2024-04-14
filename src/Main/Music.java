@@ -15,6 +15,8 @@ import java.net.URL;
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class Music extends JPanel{
 
@@ -25,10 +27,10 @@ public class Music extends JPanel{
 	public Music(Main main) {
 		this.main = main;
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{106, 59, 99, 0, 116, 0, 104, 60, 0};
-		gridBagLayout.rowHeights = new int[]{0, 187, 37, 0};
+		gridBagLayout.columnWidths = new int[]{106, 87, 99, 0, 116, 0, 104, 79, 0};
+		gridBagLayout.rowHeights = new int[]{0, 50, 187, 37, 0};
 		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
 		JButton btnNewButton = new JButton("Quay lại");
@@ -43,6 +45,15 @@ public class Music extends JPanel{
 		gbc_btnNewButton.gridx = 0;
 		gbc_btnNewButton.gridy = 0;
 		add(btnNewButton, gbc_btnNewButton);
+		
+		JLabel lblNewLabel = new JLabel("Âm thanh");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 30));
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.gridwidth = 3;
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel.gridx = 2;
+		gbc_lblNewLabel.gridy = 1;
+		add(lblNewLabel, gbc_lblNewLabel);
 		
 		
 		URL path = this.getClass().getResource("/images/begin_panel_background.jpg");

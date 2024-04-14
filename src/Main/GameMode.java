@@ -72,6 +72,12 @@ public class GameMode extends JPanel{
 		add(btnNewButton, gbc_btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Hai người chơi");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CardLayout cl = (CardLayout) (main.main_panel.getLayout());
+				cl.show(main.main_panel, "main_game");
+			}
+		});
 		btnNewButton_1.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
 		gbc_btnNewButton_1.insets = new Insets(0, 0, 5, 5);

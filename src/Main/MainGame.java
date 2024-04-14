@@ -23,30 +23,36 @@ public class MainGame extends JPanel{
 	BufferedImage bg;
 	CardLayout cl;
 	
+	GamePlay game_play;
+	int current_team = 0;
+	int stone_in_sBox = 5;
+	int stone_in_bBox = 10;
+	
 	public MainGame(Main main) {
 		this.main = main;
-		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{106, 86, 99, 0, 116, 0, 104, 95, 0};
-		gridBagLayout.rowHeights = new int[]{0, 46, 187, 37, 0};
-		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		setLayout(gridBagLayout);
+		makeComponent();
+		
+		
+	}
+	@Override
+	protected void paintComponent(Graphics g) {
+		// TODO Auto-generated method stub
+		super.paintComponent(g);
+		g.drawImage(bg, 0, 0, 640, 480, null);
+	}
+	
+	public void makeComponent() {
 		
 		JButton btnNewButton = new JButton("Quay lại");
+		btnNewButton.setBounds(0, 0, 71, 23);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cl = (CardLayout) (main.main_panel.getLayout());
 				cl.show(main.main_panel, "level");
 			}
 		});
-		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
-		gbc_btnNewButton.insets = new Insets(0, 0, 5, 5);
-		gbc_btnNewButton.gridx = 0;
-		gbc_btnNewButton.gridy = 0;
-		add(btnNewButton, gbc_btnNewButton);
-		
-		
-		
+		setLayout(null);
+		add(btnNewButton);
 		
 		URL path = this.getClass().getResource("/images/game_background.jpg");
 		try {
@@ -56,12 +62,6 @@ public class MainGame extends JPanel{
 			e.printStackTrace();
 		}
 		this.setVisible(false);
-	}
-	@Override
-	protected void paintComponent(Graphics g) {
-		// TODO Auto-generated method stub
-		super.paintComponent(g);
-		g.drawImage(bg, 0, 0, 640, 480, null);
 	}
 	
 }

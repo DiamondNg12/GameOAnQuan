@@ -6,4 +6,5 @@
  *
  */
 module GameOAnQuan {
+	requires java.desktop;
 }

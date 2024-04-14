@@ -58,6 +58,12 @@ public class Level extends JPanel{
 		add(lblNewLabel, gbc_lblNewLabel);
 		
 		JButton btnNewButton_1 = new JButton("Dễ");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CardLayout cl = (CardLayout) (main.main_panel.getLayout());
+				cl.show(main.main_panel, "main_game");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
 		gbc_btnNewButton_1.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_1.insets = new Insets(0, 0, 0, 5);
@@ -98,6 +104,6 @@ public class Level extends JPanel{
 	protected void paintComponent(Graphics g) {
 		// TODO Auto-generated method stub
 		super.paintComponent(g);
-		g.drawImage(bg, 0, 0, 737, 640, null);
+		g.drawImage(bg, 0, 0, 640, 480, null);
 	}
 }

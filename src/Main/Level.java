@@ -60,6 +60,8 @@ public class Level extends JPanel{
 		JButton btnNewButton_1 = new JButton("Dễ");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				MainGame main_game = new MainGame(main, 1);
+				main.main_panel.add(main_game, "main_game");
 				CardLayout cl = (CardLayout) (main.main_panel.getLayout());
 				cl.show(main.main_panel, "main_game");
 			}
@@ -72,6 +74,14 @@ public class Level extends JPanel{
 		add(btnNewButton_1, gbc_btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Trung bình");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainGame main_game = new MainGame(main, 2);
+				main.main_panel.add(main_game, "main_game");
+				CardLayout cl = (CardLayout) (main.main_panel.getLayout());
+				cl.show(main.main_panel, "main_game");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_2 = new GridBagConstraints();
 		gbc_btnNewButton_2.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_2.insets = new Insets(0, 0, 0, 5);
@@ -80,6 +90,14 @@ public class Level extends JPanel{
 		add(btnNewButton_2, gbc_btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("Khó");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainGame main_game = new MainGame(main, 3);
+				main.main_panel.add(main_game, "main_game");
+				CardLayout cl = (CardLayout) (main.main_panel.getLayout());
+				cl.show(main.main_panel, "main_game");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_3 = new GridBagConstraints();
 		gbc_btnNewButton_3.insets = new Insets(0, 0, 0, 5);
 		gbc_btnNewButton_3.fill = GridBagConstraints.BOTH;
@@ -97,7 +115,6 @@ public class Level extends JPanel{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		this.setVisible(false);
 	}
 	
 	@Override

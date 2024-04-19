@@ -75,20 +75,6 @@ public class BeginPanel extends JPanel{
 		gbc_btnNewButton.gridy = 4;
 		add(btnNewButton, gbc_btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Cài đặt");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				cl = (CardLayout) (main.main_panel.getLayout());
-				cl.show(main.main_panel, "music");
-			}
-		});
-		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
-		gbc_btnNewButton_1.fill = GridBagConstraints.BOTH;
-		gbc_btnNewButton_1.insets = new Insets(0, 0, 5, 5);
-		gbc_btnNewButton_1.gridx = 3;
-		gbc_btnNewButton_1.gridy = 5;
-		add(btnNewButton_1, gbc_btnNewButton_1);
-		
 		JButton btnNewButton_3 = new JButton("Thoát");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -99,7 +85,7 @@ public class BeginPanel extends JPanel{
 		gbc_btnNewButton_3.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_3.insets = new Insets(0, 0, 5, 5);
 		gbc_btnNewButton_3.gridx = 3;
-		gbc_btnNewButton_3.gridy = 6;
+		gbc_btnNewButton_3.gridy = 5;
 		add(btnNewButton_3, gbc_btnNewButton_3);
 		
 

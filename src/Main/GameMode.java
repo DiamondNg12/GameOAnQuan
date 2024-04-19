@@ -7,6 +7,7 @@ import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.CardLayout;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.Graphics;
 
@@ -75,6 +76,8 @@ public class GameMode extends JPanel{
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cl = (CardLayout) (main.main_panel.getLayout());
+				MainGame main_game = new MainGame(main, 0);
+				main.main_panel.add(main_game, "main_game");
 				cl.show(main.main_panel, "main_game");
 			}
 		});
@@ -92,7 +95,6 @@ public class GameMode extends JPanel{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		this.setVisible(false);
 	}
 	
 	@Override

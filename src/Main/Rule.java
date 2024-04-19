@@ -58,7 +58,41 @@ public class Rule extends JPanel{
 		add(lblNewLabel, gbc_lblNewLabel);
 		
 		JTextArea textArea = new JTextArea();
-		textArea.setText("Luật chơi");
+		StringBuilder builder = new StringBuilder();
+		String line1 = "1. Người chơi lần lượt bốc từng quân cờ từ ô của mình sang ô tiếp theo.";
+		String line2 = "Dải quân ô đó lần lượt mỗi ô 1 quân theo chiều trái hoặc phải.";
+		String line3 = "Nếu ô tiếp theo đã có quân cờ thì bốc tiếp quân cờ ở ô đó sang ô tiếp theo nữa";
+		String line4 = "2. Khi rải hết quân cuối cùng, tùy tình huống mà người chơi sẽ phải xử lý tiếp " + "\n "
+				+ " như sau:";
+		String line5 = "  - Nếu liền sau đó là một ô vuông có chứa quân thì tiếp tục dùng tất cả số quân " + "\n "
+				+ " đó để rải tiếp theo chiều đã chọn." + "\n"
+				+ " Tuy nhiên nếu ô đó là một ô Quan thì chỉ được phép lấy 1 quân để rải";
+		String line6 = "   - Nếu liền sau đó là một ô trống (không phân biệt ô quan hay ô dân) rồi đến một " + "\n"
+				+ " ô có chứa quân thì người chơi sẽ được ăn tất cả số quân trong ô đó" + "\n"
+				+ " ( lưu ý là quan phải có đủ 5 dân thì mới được phép ăn). " + "\n"
+				+ " Nếu chưa đủ thì nước đi đó sẽ mất lượt.)";
+		String line7 = "3. Khi dải quân mà ô tiếp theo và các ô tiếp sau đó không có quân để dải thì lượt " + "\n"
+				+ " của người chơi đó dừng";
+		String line8 = "4. Người chơi chỉ được phép bốc quân ở bên phía của mình. " + "\n"
+				+ " Nếu bên mình hết quân thì sẽ phải lấy 5 quân đã ăn dải lần lượt vào 5 ô ở bên mình";
+		String line9 = "5. Trò chơi kêt thúc khi 2 ô quan không còn quan và dân";
+		String line10 = "6. Cách tính điểm là Quan: 10 điểm, dân 1 điểm. " + "\n"
+				+ " Người nào được nhiều điểm hơn người đó sẽ thắng";
+
+		// Xây dựng mỗi dòng
+		builder.append(line1).append("\n");
+		builder.append(line2).append("\n");
+		builder.append(line3).append("\n");
+		builder.append(line4).append("\n");
+		builder.append(line5).append("\n");
+		builder.append(line6).append("\n");
+		builder.append(line7).append("\n");
+		builder.append(line8).append("\n");
+		builder.append(line9).append("\n");
+		builder.append(line10).append("\n");
+		String text = builder.toString();
+
+		textArea.setText(text);
 		GridBagConstraints gbc_textArea = new GridBagConstraints();
 		gbc_textArea.gridwidth = 6;
 		gbc_textArea.insets = new Insets(0, 0, 5, 5);
@@ -76,7 +110,6 @@ public class Rule extends JPanel{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		this.setVisible(false);
 	}
 	
 	@Override
